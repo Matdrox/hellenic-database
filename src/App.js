@@ -8,8 +8,15 @@ function App() {
 
   const HandleSearch = (e) => {
     e.preventDefault();
-    console.log(search);
-    // FetchSearch(search);
+    FetchSearch(search);
+  };
+
+  const FetchSearch = async (query) => {
+    const temp = await fetch(
+      `https://anfi.tk/greekApi/person/en/${query}`
+    ).then((res) => res.json());
+    console.log(temp.results)
+    setMythsList(temp.results);
   };
 
   return (
