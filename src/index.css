@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@1,7..72,500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 body {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  /* font-family: 'Literata', serif; */
+  font-family: 'Montserrat', sans-serif;
 }
