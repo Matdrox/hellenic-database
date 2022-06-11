@@ -1,10 +1,32 @@
+import { useState, useEffect } from 'react';
 import Card from './components/Card';
+import Search from './components/Search';
 
 function App() {
+  const [mythsList, setMythsList] = useState([]);
+  const [search, setSearch] = useState('');
+
+  const HandleSearch = (e) => {
+    e.preventDefault();
+    console.log(search);
+    // FetchSearch(search);
+  };
+
   return (
     // PURPLE IF DARK MODE!
-    <div className='w-full min-h-screen flex items-center justify-center bg-gradient-to-bl from-blue-50 to-blue-400'>
-      The Greek Mythology Search Database
+    <div className='w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-bl from-blue-100 to-blue-400'>
+      <h1 className='text-white font-bold text-5xl'>Hellenic Database</h1>
+      <p className='text-white text-3xl'>The Greek Mythology Search Database</p>
+      <br />
+      <p className='text-white text-2xl'>
+        Search for a Hellenic god or creature:
+      </p>
+      <Search
+        HandleSearch={HandleSearch}
+        search={search}
+        setSearch={setSearch}
+        mythsList={mythsList}
+      />
       <div className='container grid grid-cols-6 gap-10'>
         {/* GLASS CARD WITH GOD'S STATUE */}
         <Card />
