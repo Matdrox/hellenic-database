@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import GreekMyth, { allCollection } from 'greek-mythology-data';
-import Card from './components/Card';
 import Search from './components/Search';
+import Results from './components/Results';
 
 function App() {
   // const [mythsList, setMythsList] = useState([]);
@@ -30,9 +30,11 @@ function App() {
     }
   };
 
-  const FindSearch = (e) => {
+	const allGods = new GreekMyth(allCollection)
+
+  const FindSearch = (data) => {
     search.s = search.s[0].toUpperCase() + search.s.slice(1).toLowerCase();
-    const allGods = new GreekMyth(allCollection);
+    // const allGods = new GreekMyth(allCollection);
     console.log(allGods.list.find((item) => item.name === search.s));
     // console.log(allGods.list[1].greekName.split(',')[0])
     // console.log(search.s)
@@ -59,14 +61,7 @@ function App() {
         EnterSearch={EnterSearch}
       />
       {/* <div className='container grid grid-cols-6 grid-rows-4 gap-10'> */}
-      <div className='p-10 w-full grid grid-cols-1 gap-5 lg:grid-cols-5'>
-        {/* GLASS CARD WITH GOD'S STATUE */}
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </div>
+			<Results results={search.results}/>
     </div>
   );
 }
