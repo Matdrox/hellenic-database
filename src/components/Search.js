@@ -1,9 +1,18 @@
-import { data } from 'autoprefixer';
-import React from 'react';
+import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 const Search = (props) => {
-	console.log(props.data);
+	const [filteredData, setFilteredData] = useState([]);
+
+	const HandleFilter = (e) => {
+		const search = e.target.value;
+		const newFilter = props.data.filter((value) => {
+			// return value.name.includes(search);
+			return value.name.toLowerCase().includes(search.toLowerCase());
+		});
+		setFilteredData(newFilter);
+	};
+
 	return (
 		<div>
 			<div
@@ -19,8 +28,9 @@ const Search = (props) => {
 					placeholder={props.placeholder}
 					// value={props.search}
 					// onChange={(e) => props.setSearch(e.target.value)}
-					onChange={props.HandleSearch}
-					onKeyPress={props.EnterSearch}
+					// onChange={props.HandleSearch}
+					onChange={HandleFilter}
+					// onKeyPress={props.EnterSearch}
 					required
 				></input>
 				<button
@@ -31,15 +41,17 @@ const Search = (props) => {
 					<FaSearch className='text-white text-lg' />
 				</button>
 			</div>
-			<div className='overflow-hidden overflow-y-auto bg-slate-100 h-[100px] w-[194px] -mt-[2px]'>
-				{props.data.map((value, key) => {
-					return (
-						<div className='p-2 text-sm cursor-pointer hover:bg-slate-300'>
-							{value.name}
-						</div>
-					);
-				})}
-			</div>
+			{filteredData.length != 0 && (
+				<div className='overflow-hidden overflow-y-auto bg-slate-100 h-48 w-[194px] -mt-[2px]'>
+					{filteredData.map((value, key) => {
+						return (
+							<div className='p-2 text-sm cursor-pointer hover:bg-slate-300'>
+								{value.name}
+							</div>
+						);
+					})}
+				</div>
+			)}
 		</div>
 	);
 };
