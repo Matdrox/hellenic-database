@@ -1,20 +1,23 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GreekMyth, { allCollection } from 'greek-mythology-data';
 import Search from './components/Search';
 
 function App() {
   const [filteredData, setFilteredData] = useState([]);
+  const allGods = new GreekMyth(allCollection);
+  // allGods = allGods.slice(0, 200)
 
   const HandleFilter = (e) => {
     const search = e.target.value;
-    const newFilter = allGods.collection.filter((value) => {
-      // return value.name.includes(search);
-      return value.name.toLowerCase().includes(search.toLowerCase());
-    });
+    const newFilter = allGods.collection
+      .filter((value) => {
+        // return value.name.includes(search);
+        return value.name.toLowerCase().includes(search.toLowerCase());
+      })
+      .slice(0, 200);
     setFilteredData(newFilter);
   };
 
-  const allGods = new GreekMyth(allCollection);
   console.log(filteredData);
 
   // const FindSearch = (data) => {
@@ -40,7 +43,7 @@ function App() {
         placeholder='Enter a name...'
         data={allGods.collection}
         HandleFilter={HandleFilter}
-        filteredData={filteredData}
+        filteredData={filteredData.length != 0 ? filteredData : allGods.collection}
       />
     </div>
   );
