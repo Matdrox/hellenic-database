@@ -38,7 +38,7 @@ function App() {
       </p>
       <br />
       <p className='text-white text-2xl text-center'>
-        Search for a Hellenic god or creature:
+        Search for a Hellenic god or hero:
       </p>
       <Search
         placeholder='Enter a name...'

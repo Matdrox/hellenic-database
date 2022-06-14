@@ -1,0 +1,26 @@
+diff --git a/node_modules/greek-mythology-data/data/all.json b/node_modules/greek-mythology-data/data/all.json
+index bc0a6e2..65e5a55 100644
+--- a/node_modules/greek-mythology-data/data/all.json
++++ b/node_modules/greek-mythology-data/data/all.json
+@@ -119,7 +119,7 @@
+     "gender":"female",
+     "images": {
+       "thumbnail":"",
+-      "regular":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/CSA-T46-%2410-1861_%281862_in_error%29.jpg/800px-CSA-T46-%2410-1861_%281862_in_error%29.jpg"
++      "regular":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Demeter_Altemps_Inv8546.jpg/800px-Demeter_Altemps_Inv8546.jpg"
+     },
+     "relatives": {
+       "father":"",
+diff --git a/node_modules/greek-mythology-data/incomplete-data/major-olympians.json b/node_modules/greek-mythology-data/incomplete-data/major-olympians.json
+index 6448720..9b32e2d 100644
+--- a/node_modules/greek-mythology-data/incomplete-data/major-olympians.json
++++ b/node_modules/greek-mythology-data/incomplete-data/major-olympians.json
+@@ -132,7 +132,7 @@
+         "thumbnail": ""
+       },
+       {
+-        "regular": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/CSA-T46-%2410-1861_%281862_in_error%29.jpg/800px-CSA-T46-%2410-1861_%281862_in_error%29.jpg"
++        "regular": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Demeter_Altemps_Inv8546.jpg/800px-Demeter_Altemps_Inv8546.jpg"
+       }
+     ],
+     "relatives": {
