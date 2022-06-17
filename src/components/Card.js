@@ -6,7 +6,7 @@ const Card = ({ value }) => {
     <div className='bg-white/30 text-white text-center rounded-xl shadow-md h-full grid grid-cols-2 border-b border-r'>
       <div className='col-span-2 row-span-2'>
         <img
-          className='mix-blend-darken rounded-t-xl h-96 w-full object-cover'
+          className='mix-blend-darken rounded-t-xl h-96 w-full object-cover object-top'
           src={value.images.regular}
         />
       </div>
