@@ -28,7 +28,6 @@ function App() {
 
   return (
     // PURPLE IF DARK MODE!
-    // <div className='w-full min-h-screen flex flex-col items-center bg-gradient-to-bl from-blue-100 to-blue-400'>
     <div className='w-full min-h-screen flex flex-col items-center bg-[url("images/background.jpg")] bg-cover'>
       <h1 className='text-white font-bold text-5xl text-center mt-20'>
         Hellenic Database
