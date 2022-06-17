@@ -3,7 +3,7 @@ import imgAthena from '../images/AthenaGlass.png';
 const Card = ({ value }) => {
   return (
     // <div className='bg-white/30 h-30 col-span-1 row-span-2 grid grid-cols-2 grid-rows-4 rounded-xl shadow-md'>
-    <div className='bg-white/30 text-white text-center rounded-xl shadow-md h-full grid grid-cols-2'>
+    <div className='bg-white/30 text-white text-center rounded-xl shadow-md h-full grid grid-cols-2 border-b border-r'>
       <div className='col-span-2 row-span-2'>
         <img
           className='mix-blend-darken rounded-t-xl object-cover'
