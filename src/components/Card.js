@@ -1,4 +1,4 @@
-import imgAthena from '../images/AthenaGlass.png';
+import imgNotFound from '../images/notFound.jpg'
 
 const Card = ({ value }) => {
   return (
@@ -7,10 +7,10 @@ const Card = ({ value }) => {
       <div className='col-span-2 row-span-2'>
         <img
           className='mix-blend-darken rounded-t-xl h-96 w-full object-cover object-top'
-          src={value.images.regular}
+          src={value.images.regular ? value.images.regular : imgNotFound}
         />
       </div>
-      <h1 className='col-span-2 text-white text-3xl font-bold'>{value.name}</h1>
+      <h1 className='col-span-2 text-white text-3xl font-bold'>{value.name.split('/')[0]}</h1>
       <h2 className='col-span-2 text-white text-3xl'>
         {value.greekName && value.greekName.split(',')[0]}
       </h2>
