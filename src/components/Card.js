@@ -35,10 +35,11 @@ const Card = ({ value }) => {
       </div>
 
       <div
-        className='bg-white/30 text-slate-700 text-center rounded-xl shadow-md h-[458px] grid grid-cols-2 border-b border-r'
+        className='bg-white/30 text-slate-700 text-center rounded-xl shadow-md h-[458px] w-full flex items-center justify-center border-b border-r'
         onClick={handleClick}
       >
-        <p className='w-[340px] h-96 m-auto break-words p-2'>{value.description}</p>
+      <p className='p-2 text-sm content-center'>{value.description}</p>
+      
       </div>
     </ReactCardFlip>
   );
