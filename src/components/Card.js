@@ -39,7 +39,6 @@ const Card = ({ value }) => {
         onClick={handleClick}
       >
       <p className='p-2 text-sm content-center'>{value.description}</p>
-      
       </div>
     </ReactCardFlip>
   );
