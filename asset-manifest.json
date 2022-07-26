@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/hellenic-database/static/css/main.ece885c7.css",
-    "main.js": "/hellenic-database/static/js/main.bd367fc1.js",
+    "main.css": "/hellenic-database/static/css/main.47891c86.css",
+    "main.js": "/hellenic-database/static/js/main.77bf44e9.js",
     "static/js/787.7cf1969c.chunk.js": "/hellenic-database/static/js/787.7cf1969c.chunk.js",
     "static/media/background.jpg": "/hellenic-database/static/media/background.3f5fdec0a9729df9118b.jpg",
     "static/media/notFound.jpg": "/hellenic-database/static/media/notFound.4c1f5804e9ef3ef5956d.jpg",
     "index.html": "/hellenic-database/index.html",
-    "main.ece885c7.css.map": "/hellenic-database/static/css/main.ece885c7.css.map",
-    "main.bd367fc1.js.map": "/hellenic-database/static/js/main.bd367fc1.js.map",
+    "main.47891c86.css.map": "/hellenic-database/static/css/main.47891c86.css.map",
+    "main.77bf44e9.js.map": "/hellenic-database/static/js/main.77bf44e9.js.map",
     "787.7cf1969c.chunk.js.map": "/hellenic-database/static/js/787.7cf1969c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ece885c7.css",
-    "static/js/main.bd367fc1.js"
+    "static/css/main.47891c86.css",
+    "static/js/main.77bf44e9.js"
   ]
 }
