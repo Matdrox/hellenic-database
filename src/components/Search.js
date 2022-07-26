@@ -4,9 +4,7 @@ import Results from './Results';
 const Search = (props) => {
   return (
     <div>
-      <div
-        className='flex items-center justify-center mt-2 -mb-2'
-      >
+      <div className='flex items-center justify-center mt-2 -mb-2'>
         <input
           className='pl-2 shadow-md rounded rounded-r-none p-2 z-10
         focus:outline-none'
