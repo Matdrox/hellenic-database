@@ -9,11 +9,16 @@ const Card = ({ value }) => {
     setIsFlipped(!isFlipped);
   };
 
+  const firstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <ReactCardFlip isFlipped={isFlipped} flipDirection='horizontal'>
       <div
         className='bg-white/30 text-white text-center rounded-xl shadow-md h-full grid grid-cols-2 border-b border-r'
-        onClick={handleClick}
+        onMouseDown={handleClick}
+        onMouseUp={handleClick}
       >
         <div className='col-span-2 row-span-2'>
           <img
@@ -35,10 +40,10 @@ const Card = ({ value }) => {
       </div>
 
       <div
-        className='bg-white/30 text-slate-700 text-center rounded-xl shadow-md h-[458px] w-full flex items-center justify-center border-b border-r'
-        onClick={handleClick}
+        className='bg-white/30 text-slate-700 text-center rounded-xl shadow-md h-[456px] w-full flex items-center justify-center border-b border-r'
+        onMouseUp={handleClick}
       >
-      <p className='p-2 text-sm content-center'>{value.description}</p>
+        <p className='p-2 text-sm content-center'>{value.description && firstLetter(value.description)}</p>
       </div>
     </ReactCardFlip>
   );
